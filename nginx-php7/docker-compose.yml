@@ -1,0 +1,16 @@
+web:
+  image: webgig/nginx-php7-fpm
+  ports:
+    - "8080:80"
+  volumes:
+    - ./www:/var/www
+  links:
+    - db
+db:
+  image: webgig/mysql56 
+  ports:
+    - "3306:80"
+  volumes:
+   - /var/lib/mysql
+  environment:
+    MYSQL_PASS: "**ChangeMe**"

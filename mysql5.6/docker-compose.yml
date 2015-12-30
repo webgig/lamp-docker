@@ -1,0 +1,6 @@
+db:
+  image: webgig/mysql56
+  volumes:
+   - /var/lib/mysql
+  environment:
+    MYSQL_PASS: "**ChangeMe**"
